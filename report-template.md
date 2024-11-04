@@ -10,13 +10,13 @@ When I attempted to submit my predictions, I realized that the output format fro
 
 ### What was the top-ranked model that performed?
 
-The top-ranked model in the initial training phase was `RandomForest`, which performed the best in terms of accuracy compared to other models tested.
+The top-ranked model in the initial training phase was `WeightedEnsemble_L3`, which performed the best in terms of accuracy compared to other models tested.
 
 ## Exploratory Data Analysis and Feature Creation
 
 ### What did the exploratory analysis find and how did you add additional features?
 
-Exploratory Data Analysis (EDA) revealed that multiple factors influence bike-sharing demand, including weather, temperature, humidity, and days of the week. I added additional features such as 'weather_condition', 'hour_of_day', and 'day_of_week' to help the model learn better from the data.
+The exploratory data analysis (EDA) revealed several factors influencing bike-sharing demand, including the time of day and day of the year. I added additional features such as 'year', 'month', 'day', and 'hour' to help the model learn better from the data.
 
 ### How much better did your model perform after adding additional features and why do you think that is?
 
@@ -27,6 +27,22 @@ After adding additional features, the model's performance improved significantly
 ### How much better did your model perform after trying different hyperparameters?
 
 After experimenting with different hyperparameters using `Bayesian Optimization`, the model's Kaggle score dropped further to 0.48268. This indicates that hyperparameter optimization helped fine-tune the model and significantly improve its performance.
+
+### Explain why specific changes to hyperparameters impacted your results
+
+Hyperparameter tuning is a crucial part of enhancing machine learning model performance.
+
+Examples:
+
+- Learning Rate: This parameter indicates the speed at which the model updates weights. A learning rate too high can cause the model to miss optimal minima, while a rate too low can cause the model to converge slowly or get stuck in local minima. Optimizing the learning rate helps achieve a good balance between learning speed and accuracy.
+
+- Number of Trees: In models like RandomForest, having more trees can help the model learn more complex patterns but also increases computation time and resources. Tuning the number of trees helps enhance predictive capability without excessively raising computational costs.
+Depth of Trees: The tree depth determines the model's ability to model complex interactions in the data. However, too much depth can lead to overfitting.
+Why Hyperparameter Tuning is Important
+- Hyperparameter tuning helps the model:
+Increase prediction accuracy.
+Minimize generalization error and avoid overfitting.
+Make the most of computational resources and training time.
 
 ### If you were given more time with this dataset, where do you think you would spend more time?
 
